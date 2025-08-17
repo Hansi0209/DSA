@@ -1,0 +1,44 @@
+// File: Data_Structures/HashSetSet.java
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSetSet {
+    public static void main(String[] args) {
+        // Create a HashSet of Strings
+        HashSet<String> set = new HashSet<>();
+
+        // Adding elements
+        set.add("Apple");
+        set.add("Banana");
+        set.add("Orange");
+        set.add("Mango");
+        set.add("Banana"); // duplicate, will not be added
+
+        // Display HashSet elements
+        System.out.println("HashSet elements: " + set);
+
+        // Check if element exists
+        if (set.contains("Apple")) {
+            System.out.println("Apple is in the set.");
+        }
+
+        // Remove an element
+        set.remove("Orange");
+        System.out.println("After removing Orange: " + set);
+
+        // Iterating through HashSet using iterator
+        System.out.print("Iterating: ");
+        Iterator<String> it = set.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
+        System.out.println();
+
+        // Size of the set
+        System.out.println("Size of HashSet: " + set.size());
+
+        // Clear the set
+        set.clear();
+        System.out.println("HashSet after clearing: " + set);
+    }
+}
