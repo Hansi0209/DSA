@@ -1,5 +1,4 @@
-Got it 👍
-Here’s a clean **Java implementation of `ArrayStack`** you can directly put in your `Data_Structures/ArrayStack.java` file on GitHub:
+Got it. Here’s a clean **Java implementation of `ArrayStack`** that you can place in your `Data_Structures/ArrayStack.java` file on GitHub:
 
 ```java
 // File: Data_Structures/ArrayStack.java
@@ -88,12 +87,12 @@ public class ArrayStack<T> {
 
 ---
 
-### 📌 Features:
+### Features:
 
-* Generic (can store any type, e.g., `Integer`, `String`, etc.)
-* `push`, `pop`, `peek`, `isEmpty`, `isFull`, `display` methods
-* `main` method included for testing
+* Generic, can store any type, e.g., `Integer`, `String`, etc.
+* Methods: `push`, `pop`, `peek`, `isEmpty`, `isFull`, `display`
+* Main method included for testing
 
 ---
 
-Would you like me to also give you the **LinkedListCollection code** next so you can upload them one by one to your GitHub?
+Would you like me to provide the **LinkedListCollection code** next so you can upload them one by one to your GitHub?
