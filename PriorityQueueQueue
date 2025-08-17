@@ -1,0 +1,71 @@
+// File: Data_Structures/PriorityQueueQueue.java
+
+import java.util.PriorityQueue;
+
+public class PriorityQueueQueue<T extends Comparable<T>> {
+    private PriorityQueue<T> queue;
+
+    // Constructor
+    public PriorityQueueQueue() {
+        queue = new PriorityQueue<>();
+    }
+
+    // Add element (enqueue)
+    public void enqueue(T item) {
+        queue.add(item);
+        System.out.println(item + " added to the priority queue.");
+    }
+
+    // Remove element with highest priority (smallest element in natural order)
+    public T dequeue() {
+        if (queue.isEmpty()) {
+            System.out.println("Priority queue is empty. Cannot dequeue.");
+            return null;
+        }
+        return queue.poll();
+    }
+
+    // Peek at the next element (highest priority)
+    public T peek() {
+        if (queue.isEmpty()) {
+            System.out.println("Priority queue is empty.");
+            return null;
+        }
+        return queue.peek();
+    }
+
+    // Get size
+    public int size() {
+        return queue.size();
+    }
+
+    // Check if empty
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
+
+    // Display all elements (order not guaranteed since it's a heap internally)
+    public void display() {
+        System.out.println("Priority Queue elements: " + queue);
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        PriorityQueueQueue<Integer> pq = new PriorityQueueQueue<>();
+
+        pq.enqueue(30);
+        pq.enqueue(10);
+        pq.enqueue(20);
+        pq.enqueue(5);
+
+        pq.display();
+
+        System.out.println("Peek: " + pq.peek());
+
+        System.out.println("Dequeued: " + pq.dequeue());
+        pq.display();
+
+        System.out.println("Dequeued: " + pq.dequeue());
+        pq.display();
+    }
+}
