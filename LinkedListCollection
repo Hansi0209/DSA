@@ -1,3 +1,4 @@
+```java
 // File: Data_Structures/LinkedListCollection.java
 
 import java.util.LinkedList;
@@ -100,3 +101,4 @@ public class LinkedListCollection<T> {
         System.out.println("Collection size: " + collection.size());
     }
 }
+```
