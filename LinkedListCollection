@@ -1,0 +1,102 @@
+// File: Data_Structures/LinkedListCollection.java
+
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class LinkedListCollection<T> {
+    private LinkedList<T> list;
+
+    // Constructor
+    public LinkedListCollection() {
+        list = new LinkedList<>();
+    }
+
+    // Add element at the end
+    public void add(T item) {
+        list.add(item);
+        System.out.println(item + " added to the collection.");
+    }
+
+    // Add element at a specific index
+    public void addAt(int index, T item) {
+        if (index < 0 || index > list.size()) {
+            System.out.println("Invalid index.");
+            return;
+        }
+        list.add(index, item);
+        System.out.println(item + " added at index " + index);
+    }
+
+    // Remove element by value
+    public void remove(T item) {
+        if (list.remove(item)) {
+            System.out.println(item + " removed from the collection.");
+        } else {
+            System.out.println(item + " not found in the collection.");
+        }
+    }
+
+    // Remove element at index
+    public void removeAt(int index) {
+        if (index < 0 || index >= list.size()) {
+            System.out.println("Invalid index.");
+            return;
+        }
+        T removed = list.remove(index);
+        System.out.println(removed + " removed from index " + index);
+    }
+
+    // Get element at index
+    public T get(int index) {
+        if (index < 0 || index >= list.size()) {
+            System.out.println("Invalid index.");
+            return null;
+        }
+        return list.get(index);
+    }
+
+    // Check if collection contains an element
+    public boolean contains(T item) {
+        return list.contains(item);
+    }
+
+    // Get size
+    public int size() {
+        return list.size();
+    }
+
+    // Check if empty
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    // Display all elements
+    public void display() {
+        System.out.print("Collection elements: ");
+        Iterator<T> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.print(it.next() + " ");
+        }
+        System.out.println();
+    }
+
+    // Main method for testing
+    public static void main(String[] args) {
+        LinkedListCollection<Integer> collection = new LinkedListCollection<>();
+
+        collection.add(10);
+        collection.add(20);
+        collection.add(30);
+        collection.display();
+
+        collection.addAt(1, 15);
+        collection.display();
+
+        collection.removeAt(2);
+        collection.display();
+
+        System.out.println("Element at index 1: " + collection.get(1));
+        System.out.println("Contains 20? " + collection.contains(20));
+        System.out.println("Collection size: " + collection.size());
+    }
+}
